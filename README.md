@@ -52,16 +52,34 @@ DNS | localhost.localdomain
 IPv4 DNS #1 | 8.8.8.8
 IPv4 DNS #2 | 8.8.4.4
 
-  ## Configuração IPv4
-  Configuração | Valor
-  -|-
-  DHCP | Desativado
-  Endereço IP | 192.168.1.51
-  Máscara de sub-rede | 255.255.255.0
-  Default Router | 192.168.1.1
+## Configuração IPv4
+Configuração | Valor
+-|-
+DHCP | Desativado
+Endereço IP | 192.168.1.51
+Máscara de sub-rede | 255.255.255.0
+Default Router | 192.168.1.1
   
-  ##Configuração IPv6
-  IPv6 não foi configurado nessa máquina.
+## Configuração IPv6
+IPv6 não foi configurado nessa máquina.
+
+## Serviços de boot configurados
+Serviço | Descrição
+-|-
+sshd | Secure shell daemon
+dumpdev | Habilita os despejos da memória do kernel para /var/crash
+
+## Hardening
+Opções de hardening para segurança do sistema habilitadas no momento da formatação:
+  1 - Desabilitar leitura das mensagens do buffer do kernle para usuário sem privilégios.
+  2 - Desabilitar processos de depuração para usuários sem privilégios.
+  3 - Limpar o diretório /tmp em toda inicialização do sistema.
+
+## Usuários
+Login | senha
+-|-
+root | Redes@123
+god | alunoruy2018
 
 ## Atualizações do sistema
 
@@ -69,10 +87,11 @@ IPv4 DNS #2 | 8.8.4.4
  
 
 ## Firewall
- Está sendo usado o firewall nativo do windows, não foi instalado nenhum firewall externo em outros dispositivos ou para.
+ (Configurar Firewall)
 > Versão do firewall: ????
+
 ## Estado das portas
-> Todas as portas estão fechadas menos a 80 (HTTP), 443 (SSL), 21 (FTP), 3389 (Remote Desktop), [49841,49686,49671] usadas pelo sistema.
+> Todas as portas estão fechadas menos a 80 (HTTP), 443 (SSL), 21 (FTP), 3389 (Remote Desktop), [49841,49686,49671] usadas pelo sistema. ( Verificar Portas FreeBSD)
 
 ##### Log netstat:
 
