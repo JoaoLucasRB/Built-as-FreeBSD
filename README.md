@@ -24,6 +24,7 @@ Sistema| Versão | Particionamento
 FreeBSD &reg;| 1803| Utilizamos duas partições, uma contendo o padrão para instalar o sistema e a segunda para acomodar a memória virtual.
 
 ## Distribuições Instaladas
+Biblioteca | Descrição
 -|-
 base-dbg | Base System (Debugging)
 -|-
