@@ -71,9 +71,9 @@ dumpdev | Habilita os despejos da memória do kernel para /var/crash
 
 ## Hardening
 Opções de hardening para segurança do sistema habilitadas no momento da formatação:
-  1 - Desabilitar leitura das mensagens do buffer do kernle para usuário sem privilégios.
-  2 - Desabilitar processos de depuração para usuários sem privilégios.
-  3 - Limpar o diretório /tmp em toda inicialização do sistema.
+\n  1 - Desabilitar leitura das mensagens do buffer do kernle para usuário sem privilégios.
+ \n 2 - Desabilitar processos de depuração para usuários sem privilégios.
+ \n 3 - Limpar o diretório /tmp em toda inicialização do sistema.
 
 ## Usuários
 Login | senha
