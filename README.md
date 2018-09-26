@@ -44,7 +44,7 @@ ports | Ports tree
 src | System source tree
 
 ## Configurações de Rede
-
+Configuração | Valor
 -|-
 hostname | equipe03
 Interface de rede | Intel(R) PRO/1000 Legacy Network Connection 1.1.0
@@ -53,9 +53,9 @@ IPv4 DNS #1 | 8.8.8.8
 IPv4 DNS #2 | 8.8.4.4
 
   ## Configuração IPv4
-  Campo | Valor
+  Configuração | Valor
   -|-
-  DHCP | desativado
+  DHCP | Desativado
   Endereço IP | 192.168.1.51
   Máscara de sub-rede | 255.255.255.0
   Default Router | 192.168.1.1
