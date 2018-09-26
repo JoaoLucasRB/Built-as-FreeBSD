@@ -3,7 +3,7 @@
 Esse documento descreve como foi feita a configuração do servidor e porque tais configurações foram escolhidas bem como as ferramentas nela instaladas. Tambem é descrito no mesmo todo processo (checklist) do handering para promover segurança e estabilidade no servidor.
 
 ## Hardware e Sistema Operacional
-Para este servidor em especifico foi utilizado o hardware ofercido pela instituição e como se trata de um laboratorio código livre será usado o FreeBSD &reg para manter o servidor.
+Para este servidor em especifico foi utilizado o hardware ofercido pela instituição e como se trata de um laboratorio código livre será usado o FreeBSD &reg; para manter o servidor.
 
 Processador | Descrição | Motivo
 -|-|-
@@ -71,9 +71,9 @@ dumpdev | Habilita os despejos da memória do kernel para /var/crash
 
 ## Hardening
 Opções de hardening para segurança do sistema habilitadas no momento da formatação:  
-1 - Desabilitar leitura das mensagens do buffer do kernle para usuário sem privilégios.  
-2 - Desabilitar processos de depuração para usuários sem privilégios.  
-3 - Limpar o diretório /tmp em toda inicialização do sistema.
+- Desabilitar leitura das mensagens do buffer do kernle para usuário sem privilégios.  
+- Desabilitar processos de depuração para usuários sem privilégios.  
+- Limpar o diretório /tmp em toda inicialização do sistema.
 
 ## Usuários
 Login | senha
