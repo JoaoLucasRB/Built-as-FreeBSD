@@ -27,17 +27,11 @@ FreeBSD &reg;| 1803| Utilizamos duas partições, uma contendo o padrão para in
 Biblioteca | Descrição
 -|-
 base-dbg | Base System (Debugging)
--|-
 doc | Additional Documentation
--|-
 kernel-dbg | Kernel (Debugging)
--|-
 lib32-dbg | 32-bit compatibility libraries (Debugging)
--|-
 lib32 | 32-bit compatibility libraries
--|-
 ports | Ports tree
--|-
 src | System source tree
 
 ## Configurações de Rede
