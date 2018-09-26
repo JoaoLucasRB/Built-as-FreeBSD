@@ -21,10 +21,19 @@ Memória secundária|Descrição| Motivo
   
 Sistema| Versão | Particionamento
 -|-|-
-FreeBSD &reg;| 1803| Utilizamos duas partições, uma contendo o padrão para instalar o sistema e a segunda para acomodar a memória virtual.
+FreeBSD &reg;| 1803| Utilizamos o modo de particionamento autómatico (UFS), e o esquema de particionamento GUID Partition Table (GPT).
+
+## Particionamento do disco rígido
+Partição | Tamanho | Propósito
+-|-|-
+Partição 1 - freebsd-boot | 512 KB | BOOT Kernel
+Partição 2  - freebsd-ufs| 28 GB | Armazenamento Principal
+Partilçao 3 - freebsd-swap | 1 GB | SWAP
 
 ## Distribuições Instaladas
-Biblioteca | Descrição
+Componentes do sistema opcionais que foram instalados no processo de formatação da máquina.
+
+Componentes do sistema | Descrição
 -|-
 base-dbg | Base System (Debugging)
 doc | Additional Documentation
@@ -36,6 +45,18 @@ src | System source tree
 
 ## Configurações de Rede
 hostname: equipe03
+interface de rede: Intel(R) PRO/1000 Legacy Network Connection 1.1.0
+Search: localhost.localdomain
+IPv4 DNS #1: 8.8.8.8
+IPv4 DNS #2: 8.8.4.4
+  #Configuração IPv4
+  DHCP: desativado
+  Endereço IP: 192.168.1.51
+  Máscara de sub-rede: 255.255.255.0
+  Default Router 192.168.1.1
+  
+  #Configuração IPv6
+  IPv6 não foi configurado nessa máquina.
 
 ## Atualizações do sistema
 
