@@ -49,13 +49,13 @@ interface de rede: Intel(R) PRO/1000 Legacy Network Connection 1.1.0
 Search: localhost.localdomain
 IPv4 DNS #1: 8.8.8.8
 IPv4 DNS #2: 8.8.4.4
-  #Configuração IPv4
+  ##Configuração IPv4
   DHCP: desativado
   Endereço IP: 192.168.1.51
   Máscara de sub-rede: 255.255.255.0
   Default Router 192.168.1.1
   
-  #Configuração IPv6
+  ##Configuração IPv6
   IPv6 não foi configurado nessa máquina.
 
 ## Atualizações do sistema
