@@ -5,30 +5,24 @@ Esse documento descreve como foi feita a configuração do servidor e porque tai
 ## Hardware e Sistema Operacional
 Para este servidor em especifico foi utilizado o hardware ofercido pela instituição e como se trata de um laboratorio código livre será usado o FreeBSD &reg; para manter o servidor.
 
-Processador | Descrição | Motivo
--|-|-
-?|?|Fornecido pela instiuição para desenvolver as atividades 
+Hardware|Especificação
+-|-
+Processador | 1 socket, 2 núcleos, x GHz
+Memória RAM | 2048MB
+Interface de rede | Intel E1000
+Disco Rígido | 32 GB
 
-Memória| Descrição | Paginação
+Sistema| Versão
 -|-|-
-Memoria xGB com yMHz| Marca tal, usa tecnologia DDRz,  foram usados k placas para formar essa quantidade de memória | Das ? quantidade de memória estão disponiveis ? para uso e foi definido ? como quantidade de memória virtual
-  
-  
-Memória secundária|Descrição| Motivo
--|-|-
-?|?|?
-  
-  
-Sistema| Versão | Particionamento
--|-|-
-FreeBSD &reg;| 1803| Utilizamos o modo de particionamento autómatico (UFS), e o esquema de particionamento GUID Partition Table (GPT).
+FreeBSD &reg;| 1803
 
 ## Particionamento do disco rígido
-Partição | Tamanho | Propósito
--|-|-
-Partição 1 - freebsd-boot | 512 KB | BOOT Kernel
-Partição 2  - freebsd-ufs| 28 GB | Armazenamento Principal
-Partilçao 3 - freebsd-swap | 1 GB | SWAP
+Utilizamos o modo de particionamento autómatico (UFS), e o esquema de particionamento GUID Partition Table (GPT).  
+Partição | Tipo | Tamanho | Propósito
+-|-|-|-
+Partição 1 | freebsd-boot | 512 KB | BOOT Kernel
+Partição 2  | freebsd-ufs| 28 GB | Armazenamento Principal
+Partilçao 3 | freebsd-swap | 1 GB | SWAP
 
 ## Distribuições Instaladas
 Componentes do sistema opcionais que foram instalados no processo de formatação da máquina.
@@ -46,8 +40,7 @@ src | System source tree
 ## Configurações de Rede
 Configuração | Valor
 -|-
-hostname | equipe03
-Interface de rede | Intel(R) PRO/1000 Legacy Network Connection 1.1.0
+hostname | equipe02
 DNS | localhost.localdomain
 IPv4 DNS #1 | 8.8.8.8
 IPv4 DNS #2 | 8.8.4.4
@@ -71,7 +64,7 @@ dumpdev | Habilita os despejos da memória do kernel para /var/crash
 
 ## Hardening
 Opções de hardening para segurança do sistema habilitadas no momento da formatação:  
-- Desabilitar leitura das mensagens do buffer do kernle para usuário sem privilégios.  
+- Desabilitar leitura das mensagens do buffer do kernel para usuário sem privilégios.  
 - Desabilitar processos de depuração para usuários sem privilégios.  
 - Limpar o diretório /tmp em toda inicialização do sistema.
 
@@ -107,4 +100,4 @@ god | alunoruy2018
 
 Nome|Funçao|Instalado por
 -|-|-
-Remote Desktop|Permite a utilização do servidor via area de trabalho remota| Habilitado por Almir
+Webmin|Gerenciar recursos do servidor| Habilitado por god
