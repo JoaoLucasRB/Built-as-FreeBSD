@@ -18,6 +18,7 @@ FreeBSD &reg;| 1803
 
 ## Particionamento do disco rígido
 Utilizamos o modo de particionamento autómatico (UFS), e o esquema de particionamento GUID Partition Table (GPT).  
+
 Partição | Tipo | Tamanho | Propósito
 -|-|-|-
 Partição 1 | freebsd-boot | 512 KB | BOOT Kernel
