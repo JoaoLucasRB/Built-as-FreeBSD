@@ -13,7 +13,7 @@ Interface de rede | Intel E1000
 Disco Rígido | 32 GB
 
 Sistema| Versão
--|-|-
+-|-
 FreeBSD &reg;| 1803
 
 ## Particionamento do disco rígido
