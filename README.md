@@ -7,14 +7,14 @@ Para este servidor em especifico foi utilizado o hardware ofercido pela institui
 
 Hardware|Especificação
 -|-
-Processador | 1 socket, 2 núcleos
-Memória RAM | 2 GiB
+Processador | 1 socket, 1 núcleos
+Memória RAM | 512 MiB
 Interface de rede | Virtualizada
 Disco Rígido | 32 GB
 
 Sistema| Versão
 -|-
-FreeBSD &reg;| 1803
+FreeBSD &reg;| 11.2
 
 ## Particionamento do disco rígido
 Utilizamos o modo de particionamento autómatico (UFS), e o esquema de particionamento GUID Partition Table (GPT).  
@@ -22,8 +22,8 @@ Utilizamos o modo de particionamento autómatico (UFS), e o esquema de particion
 Partição | Tipo | Tamanho | Propósito
 -|-|-|-
 Partição 1 | freebsd-boot | 512 KB | BOOT Kernel
-Partição 2  | freebsd-ufs| 28 GB | Armazenamento Principal
-Partilçao 3 | freebsd-swap | 1 GB | SWAP
+Partição 2  | freebsd-ufs| 30 GB | Armazenamento Principal
+Partilçao 3 | freebsd-swap | 1.6 GB | SWAP
 
 ## Distribuições Instaladas
 Componentes do sistema opcionais que foram instalados no processo de formatação da máquina.
@@ -50,7 +50,7 @@ IPv4 DNS #2 | 8.8.4.4
 Configuração | Valor
 -|-
 DHCP | Desativado
-Endereço IP | 192.168.1.71
+Endereço IP | 192.168.1.72
 Máscara de sub-rede | 255.255.255.0
 Default Router | 192.168.1.1
   
@@ -65,9 +65,8 @@ dumpdev | Habilita os despejos da memória do kernel para /var/crash
 
 ## Hardening
 Opções de hardening para segurança do sistema habilitadas no momento da formatação:  
-- Desabilitar leitura das mensagens do buffer do kernel para usuário sem privilégios.  
-- Desabilitar processos de depuração para usuários sem privilégios.  
 - Limpar o diretório /tmp em toda inicialização do sistema.
+- Desativar o serviço de Sendmail
 
 ## Usuários
 Login | senha
@@ -89,11 +88,10 @@ equipe02 | alunoruy2018
 
   Proto  |Endereço local       |  Endereço externo      | Estado
  -|-|-|-
-  TCP  |  192.168.15.123:3389  |  DESKTOP-DTF118I:51112|  ESTABLISHED
-  TCP|    192.168.15.123:49671 |  13.89.217.116:https |   ESTABLISHED
-  TCP   | 192.168.15.123:49686 |  52.173.28.179:https|    ESTABLISHED
-  TCP |   192.168.15.123:49841  | 64.4.54.254:https   |   TIME_WAIT
-  TCP  |  [::1]:49842        |    WIN-FEDRIF0MEGQ:47001 | TIME_WAIT
+  tcp4 | *.ssh | *.* | LISTEN
+  tcp6 | *.ssh | *.* | LISTEN
+  tcp4 | *.syslog | *.* | 
+  tcp4 | *.syslog | *.* | 
 
 ## Serviços instalados
 
