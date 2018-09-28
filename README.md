@@ -7,9 +7,9 @@ Para este servidor em especifico foi utilizado o hardware ofercido pela institui
 
 Hardware|Especificação
 -|-
-Processador | 1 socket, 2 núcleos, x GHz
-Memória RAM | 2048MB
-Interface de rede | Intel E1000
+Processador | 1 socket, 2 núcleos
+Memória RAM | 2 GiB
+Interface de rede | Virtualizada
 Disco Rígido | 32 GB
 
 Sistema| Versão
@@ -50,7 +50,7 @@ IPv4 DNS #2 | 8.8.4.4
 Configuração | Valor
 -|-
 DHCP | Desativado
-Endereço IP | 192.168.1.51
+Endereço IP | 192.168.1.71
 Máscara de sub-rede | 255.255.255.0
 Default Router | 192.168.1.1
   
@@ -73,16 +73,14 @@ Opções de hardening para segurança do sistema habilitadas no momento da forma
 Login | senha
 -|-
 root | Redes@123
-god | alunoruy2018
+equipe02 | alunoruy2018
 
 ## Atualizações do sistema
 
- > Ultima atualização 01/09/2018 via Windows update.
- 
+ > Ultima atualização 28/09/2018 via portsnap update.
 
 ## Firewall
- (Configurar Firewall)
-> Versão do firewall: ????
+ > Firewall não foi configurado, deixando assim as configurações padrões.
 
 ## Estado das portas
 > Todas as portas estão fechadas menos a 80 (HTTP), 443 (SSL), 21 (FTP), 3389 (Remote Desktop), [49841,49686,49671] usadas pelo sistema. ( Verificar Portas FreeBSD)
@@ -101,4 +99,4 @@ god | alunoruy2018
 
 Nome|Funçao|Instalado por
 -|-|-
-Webmin|Gerenciar recursos do servidor| Habilitado por god
+Webmin|Gerenciar recursos do servidor| Habilitado por equipe02
