@@ -1,4 +1,5 @@
-# Documentação Servidor
+# LogBook equipe 02 - FreeBSD
+##### Almir Neto, Anabel Santana, André Portella, Gabriel Lyrio, Gabriel Muricy, João Silva, Mateus Trindade
 
 Esse documento descreve como foi feita a configuração do servidor e porque tais configurações foram escolhidas bem como as ferramentas nela instaladas. Tambem é descrito no mesmo todo processo (checklist) do handering para promover segurança e estabilidade no servidor.
 
@@ -69,29 +70,33 @@ Opções de hardening para segurança do sistema habilitadas no momento da forma
 - Desativar o serviço de Sendmail
 
 ## Usuários
+##### Sistema
 Login | senha
 -|-
 root | Redes@123
 equipe2 | alunoruy2018
 
-## Atualizações do sistema
+##### Webmin
+Login| Senha
+-|-
+equipe02 | Redes@123
 
+## Atualizações do sistema
  > Ultima atualização 28/09/2018 via portsnap update.
 
 ## Firewall
  > Firewall não foi configurado, deixando assim as configurações padrões.
 
-## Estado das portas
-> Todas as portas estão fechadas menos a 80 (HTTP), 443 (SSL), 21 (FTP), 3389 (Remote Desktop), [49841,49686,49671] usadas pelo sistema. ( Verificar Portas FreeBSD)
-
 ##### Log netstat:
 
   Proto  |Endereço local       |  Endereço externo      | Estado
  -|-|-|-
-  tcp4 | *.ssh | *.* | LISTEN
-  tcp6 | *.ssh | *.* | LISTEN
-  tcp4 | *.syslog | *.* | 
-  tcp4 | *.syslog | *.* | 
+ tcp4 | 192.168.1.72.10000 | * .* | LISTEN
+ tcp4 | 192.168.1.72.ssh | 192.168.1.113.56720 | ESTABILISHED
+  tcp4 | *.ssh | * .* | LISTEN
+  tcp6 | *.ssh |  * .*| LISTEN
+  tcp4 | *.syslog |  * .*| 
+  tcp4 | *.syslog |  * .*| 
 
 ## Serviços instalados
 
