@@ -72,7 +72,7 @@ Opções de hardening para segurança do sistema habilitadas no momento da forma
 Login | senha
 -|-
 root | Redes@123
-equipe02 | alunoruy2018
+equipe2 | alunoruy2018
 
 ## Atualizações do sistema
 
